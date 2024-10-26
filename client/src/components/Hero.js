@@ -29,7 +29,7 @@ const Hero = () => {
     const GetMainsPlats = async () => {
       try {
         const res = await axios.get(
-          "https://foodlly-ozos.vercel.app/main-plats"
+          "https://food-beta-indol.vercel.app/main-plats"
         );
         console.log("get main : " + res.data.mainPlats);
         setMainPlates(res.data.mainPlats);

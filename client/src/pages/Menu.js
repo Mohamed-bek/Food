@@ -38,7 +38,7 @@ const Page = () => {
 
   const GetFilterPlats = async () => {
     try {
-      const res = await axios.get("https://foodlly-ozos.vercel.app/plats", {
+      const res = await axios.get("https://food-beta-indol.vercel.app/plats", {
         params: {
           minPrice,
           maxPrice,

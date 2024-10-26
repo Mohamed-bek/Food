@@ -43,7 +43,7 @@ const Page = () => {
     const fetchPlate = async () => {
       try {
         const res = await axios.get(
-          `https://foodlly-ozos.vercel.app/plat/${id}`,
+          `https://food-beta-indol.vercel.app/plat/${id}`,
           { withCredentials: true }
         );
         setPlate(res.data.plat);
@@ -60,9 +60,13 @@ const Page = () => {
     e.preventDefault();
     if (!arePlatesEqual(originalPlat, plate)) {
       try {
-        await axios.put(`https://foodlly-ozos.vercel.app/plat/${id}`, plate, {
-          withCredentials: true,
-        });
+        await axios.put(
+          `https://food-beta-indol.vercel.app/plat/${id}`,
+          plate,
+          {
+            withCredentials: true,
+          }
+        );
         popRef.current?.classList.add("scale-[1]");
         setOriginalPlat(plate);
       } catch (error) {

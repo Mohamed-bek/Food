@@ -61,7 +61,7 @@ const Header = () => {
     try {
       console.log("Order: ", order);
       const res = await axios.post(
-        "https://foodlly-ozos.vercel.app/order",
+        "https://food-beta-indol.vercel.app/order",
         { order, name, location, phone },
         {
           withCredentials: true,

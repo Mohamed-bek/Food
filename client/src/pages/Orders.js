@@ -41,7 +41,7 @@ const Page = () => {
   const ConfirmOrder = async (id) => {
     try {
       const res = await axios.put(
-        "https://foodlly-ozos.vercel.app/order/" + id,
+        "https://food-beta-indol.vercel.app/order/" + id,
         {},
         { withCredentials: true }
       );
@@ -58,7 +58,7 @@ const Page = () => {
 
   const CancelOrder = async (id) => {
     try {
-      await axios.delete("https://foodlly-ozos.vercel.app/order/" + id, {
+      await axios.delete("https://food-beta-indol.vercel.app/order/" + id, {
         withCredentials: true,
       });
       DeleteRef.current?.classList.add("scale-[1]");
@@ -73,9 +73,12 @@ const Page = () => {
   useEffect(() => {
     const GetListOfOrders = async () => {
       try {
-        const res = await axios.get("https://foodlly-ozos.vercel.app/orders", {
-          withCredentials: true,
-        });
+        const res = await axios.get(
+          "https://food-beta-indol.vercel.app/orders",
+          {
+            withCredentials: true,
+          }
+        );
         setListOfOrders(res.data.orders);
       } catch (error) {
         console.log(error);

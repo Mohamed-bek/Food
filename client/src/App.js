@@ -9,6 +9,7 @@ import Food from "./pages/Food";
 import Login from "./pages/Login";
 import Menu from "./pages/Menu";
 import Order from "./pages/Order";
+import Orders from "./pages/Orders";
 import Header from "./components/Header";
 import Home from "./pages/Home";
 import { Route, Routes } from "react-router-dom";
@@ -26,9 +27,9 @@ function App() {
         <Route path="/booking-list" element={<BookingList />} />
         <Route path="/booking" element={<Booking />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/food" element={<Food />} />
-        <Route path="/order" element={<Order />} />
-        {/* Add more routes as needed */}
+        <Route path="/food/:id" element={<Food />} />
+        <Route path="/order/:id" element={<Order />} />
+        <Route path="/orders" element={<Order />} />
       </Routes>
     </div>
   );

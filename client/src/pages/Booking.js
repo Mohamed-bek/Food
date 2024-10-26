@@ -21,7 +21,10 @@ const RestaurantReservation = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("https://foodlly-ozos.vercel.app/reservation", formData);
+      await axios.post(
+        "https://food-beta-indol.vercel.app/reservation",
+        formData
+      );
       popRef.current?.classList.add("scale-[1]");
       setFormData(initialValue);
     } catch (error) {

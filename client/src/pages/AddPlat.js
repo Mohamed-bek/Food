@@ -53,7 +53,7 @@ const Page = () => {
 
     try {
       setIsLoading(true);
-      await axios.post("https://foodlly-ozos.vercel.app/plat", formData, {
+      await axios.post("https://food-beta-indol.vercel.app/plat", formData, {
         headers: {
           "Content-Type": "multipart/form-data",
         },

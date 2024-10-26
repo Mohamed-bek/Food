@@ -11,7 +11,7 @@ const BestSelles = () => {
     const getMainsPlats = async () => {
       try {
         const res = await axios.get(
-          "https://foodlly-ozos.vercel.app/best-selles-plats"
+          "https://food-beta-indol.vercel.app/best-selles-plats"
         );
         setPlates(res.data.bestSellesPlats);
       } catch (error) {

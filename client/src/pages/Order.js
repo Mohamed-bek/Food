@@ -19,7 +19,7 @@ const Page = () => {
     const getOrder = async () => {
       try {
         const res = await axios.get(
-          "https://foodlly-ozos.vercel.app/order/" + id,
+          "https://food-beta-indol.vercel.app/order/" + id,
           { withCredentials: true }
         );
         setOrder(res.data.order);
