@@ -60,7 +60,7 @@ const Page = () => {
   const navRef = useRef(null);
 
   return (
-    <div className="w-full relative flex justify-between items-center flex-wrap">
+    <div className="w-full relative z-10 flex justify-between items-center flex-wrap">
       <nav
         ref={navRef}
         className="fixed duration-500 text-primary h-[100vh] top-[0px] left-0 -translate-x-full bg-[#383636f1] w-full md:w-[300px] z-[99999999999999]"
