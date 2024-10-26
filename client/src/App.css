@@ -1,0 +1,330 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+:root {
+  --primary-color: #cbcccb;
+  --secondary-color: #493f42;
+  --font-size-base: 1rem;
+  --background: #ffffff;
+  --foreground: #171717;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+.NavBar li {
+  cursor: pointer;
+}
+.NavBar li a {
+  position: relative;
+  padding-bottom: 5px;
+  cursor: pointer;
+  z-index: 2000;
+}
+.NavBar li a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color: var(--secondary-color);
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: 0.3s;
+}
+.NavBar li a:hover::after {
+  width: 100%;
+}
+.hero {
+  height: calc(100vh - 70px);
+  width: 100%;
+  background-size: cover;
+  background-image: url(../public/images/bg.jpg);
+}
+.mains {
+  height: max-content;
+}
+.main {
+  height: calc(100vh - 70px);
+}
+@media (min-width: 867px) {
+  .mains {
+    height: calc(100dvh - 70px);
+  }
+}
+
+@media (max-width: 640px) {
+  .plates {
+    width: 500px;
+    height: 500px;
+    border-width: 40px;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, 70%) rotate(var(--rotation-angle));
+  }
+  .plates img {
+    width: 180px;
+    height: 180px;
+  }
+}
+
+@media (min-width: 640px) {
+  .plates {
+    width: 600px;
+    height: 600px;
+    border-width: 60px;
+    transform: translate(-55%, 55%) rotate(var(--rotation-angle));
+  }
+  .plates img {
+    width: 230px;
+    height: 230px;
+  }
+}
+
+@media (min-width: 867px) {
+  .plates {
+    width: 700px;
+    height: 700px;
+    border-width: 65px;
+  }
+  .plates img {
+    width: 260px;
+    height: 250px;
+  }
+}
+@media (min-width: 1024px) {
+  .plates {
+    width: 800px;
+    height: 800px;
+    border-width: 70px;
+  }
+  .plates img {
+    width: 290px;
+    height: 290px;
+  }
+  .navbar {
+    height: calc(100vh - 70px);
+  }
+}
+
+@media (min-width: 1280px) {
+  .plates {
+    width: 1000px;
+    height: 1000px;
+    border-width: 90px;
+  }
+  .plates img {
+    width: 340px;
+    height: 340px;
+  }
+}
+
+ul.active {
+  transform: translateY(100%);
+}
+.navbar {
+  height: calc(100vh - 70px);
+}
+
+@media (max-width: 867px) {
+  .NavBar {
+    flex-direction: column;
+    position: absolute;
+    width: 100%;
+    background-color: transparent;
+    z-index: 9999999;
+    height: calc(100dvh - 70px);
+    bottom: -1px;
+    transform: translateY(-100%);
+    transition: transform 0s ease-in-out;
+    justify-content: space-evenly;
+  }
+
+  .NavBar.active {
+    transform: translateY(100%);
+  }
+
+  .NavBar li {
+    width: 100%;
+    color: var(--primary-color);
+    background-color: #383636f1;
+    font-size: 3rem;
+    font-weight: 400;
+    height: calc(105% / 5);
+    position: relative;
+    opacity: 0;
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5),
+      0 0 10px rgba(255, 255, 255, 0.4), 0 0 15px rgba(255, 255, 255, 0.3),
+      0 0 20px rgba(255, 255, 255, 0.2);
+    z-index: 999999999999999;
+  }
+
+  .NavBar li:nth-child(1),
+  .NavBar li:nth-child(3),
+  .NavBar li:nth-child(5) {
+    transform: translateX(-100%);
+  }
+
+  .NavBar li:nth-child(2),
+  .NavBar li:nth-child(4) {
+    transform: translateX(100%);
+  }
+
+  .NavBar.active li {
+    opacity: 1;
+    transform: translateX(0%);
+    transition-delay: 0.05s;
+  }
+
+  .NavBar li.exiting {
+    opacity: 0;
+    transition-delay: 0s;
+  }
+
+  .NavBar li.exiting:nth-child(1),
+  .NavBar li.exiting:nth-child(3),
+  .NavBar li.exiting:nth-child(5) {
+    transform: translateX(-100%);
+  }
+
+  .NavBar li.exiting:nth-child(2),
+  .NavBar li.exiting:nth-child(4) {
+    transform: translateX(100%);
+  }
+
+  .NavBar li:hover {
+    letter-spacing: 20px;
+  }
+}
+.plate {
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.5s ease, transform 0.75s ease; /* Transition for opacity and transform */
+}
+
+.plate1 {
+  transform: translateX(-100%) rotate(-180deg) scale(0.4); /* Start position */
+}
+
+.plate2 {
+  transform: translateX(100%) rotate(180deg) scale(0.4); /* Start position */
+}
+
+.plate.show {
+  opacity: 1; /* Fully visible */
+  transform: translateX(0) rotate(0deg) scale(1); /* Final position */
+}
+.FoodBox {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.heartIcon.active {
+  scale: 100%;
+  animation: iconHeart 0.45s ease-in-out;
+}
+@keyframes iconHeart {
+  0% {
+    transform: translate(-50%, -50%) scale(0);
+  }
+  80% {
+    transform: translate(-50%, -50%) scale(1.3);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+/* .bestSelles:hover .imgHover {
+  po
+} */
+/* .best {
+  background: linear-gradient(45deg, #000000, #00000000);
+} */
+
+@keyframes slide-right {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+
+.HeaderRight {
+  animation: slide-right 0.3s linear forwards;
+}
+
+.HeaderLeft {
+  animation: slide-left 0.3s linear forwards;
+}
+@keyframes slide-left {
+  from {
+    transform: translate(100%, -2.5rem);
+  }
+  to {
+    transform: translate(0%, -2.5rem);
+  }
+}
+.RatingDown {
+  animation: slide-down 0.3s 1s ease-in-out forwards;
+}
+@keyframes slide-down {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translate(0%);
+  }
+}
+.sclaing {
+  animation: scaleUP 0.6s ease-in-out forwards;
+}
+@keyframes scaleUP {
+  0% {
+    transform: scale(0);
+  }
+  70% {
+    transform: scale(1.1);
+  }
+  85% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* HTML: <div class="loader"></div> */
+.loader {
+  width: 140px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: radial-gradient(farthest-side, var(--secondary-color) 94%, #0000)
+      top/16px 16px no-repeat,
+    conic-gradient(#0000 30%, var(--secondary-color));
+  -webkit-mask: radial-gradient(farthest-side, #0000 calc(100% - 8px), #000 0);
+  animation: l13 1s infinite linear;
+}
+@keyframes l13 {
+  100% {
+    transform: rotate(1turn);
+  }
+}
+
+.animate__delay0s {
+  animation-delay: 0s;
+}
+.animate__duration2s {
+  animation-delay: 0.75s;
+}
+.animated-element {
+  animation-fill-mode: backwards; /* Does not retain the final state */
+}
+.animated-element-forwards {
+  animation-fill-mode: forwards; /* Does not retain the final state */
+}
