@@ -5,7 +5,7 @@ export const LoginAdmin = async (req, res) => {
   try {
     console.log("register");
     const { username, password } = req.body;
-    const admin = await findOne({ username });
+    const admin = await Admin.findOne({ username });
     if (!admin) {
       throw new Error("Admin not found");
     }
