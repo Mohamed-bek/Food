@@ -180,7 +180,7 @@ const Header = () => {
             className="text-[1.8rem] cursor-pointer z-[999999999999999999999999999]"
           />
         </span>
-        <div className="md:hidden" onClick={toggleMenu}>
+        <div className="md:hidden mr-5" onClick={toggleMenu}>
           <GiHamburgerMenu className="text-[1.8rem] cursor-pointer" />
         </div>
       </span>
