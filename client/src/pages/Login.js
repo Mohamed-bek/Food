@@ -15,7 +15,7 @@ const Login = () => {
   useEffect(() => {
     const isLoggedIn = window.localStorage.getItem("isLoggedIn");
     if (isLoggedIn === "true") {
-      navigate("/dashboard");
+      navigate("/");
     } else {
       setIsLoading(false);
     }
@@ -43,7 +43,7 @@ const Login = () => {
       login();
       setSuccess("Login successful!");
       setTimeout(() => {
-        navigate("/dashboard");
+        navigate("/");
       }, 1000);
     } catch (error) {
       setError(error.response?.data?.err || "Login failed. Please try again.");

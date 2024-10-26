@@ -148,7 +148,7 @@ const Page = () => {
         </span>
         {isLoggedIn && (
           <h1 className="w-fit flex items-center gap-2 ml-auto mr-4 mt-3 px-4 py-2 bg-secondary relative z-[9999999] rounded-full text-primary text-[1.5rem] cursor-pointer">
-            <Link to="/addplat">Add Plat</Link> <MdAdd />
+            <Link to="/add-plat">Add Plat</Link> <MdAdd />
           </h1>
         )}
       </div>
