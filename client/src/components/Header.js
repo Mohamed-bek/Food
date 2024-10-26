@@ -76,10 +76,10 @@ const Header = () => {
   };
 
   return (
-    <div className="animate__animated animate__bounceInDown animate__duration2s animate__delay05s bg-primary MainHeder relative flex justify-around items-center w-full h-[70px] border-b-[2px] border-solid border-secondary">
+    <div className="boncDown -translate-y-full bg-primary MainHeder relative flex justify-around items-center w-full h-[70px] border-b-[2px] z-50 border-solid border-secondary">
       <nav
         ref={CardRef}
-        className="fixed duration-500 text-primary h-[100vh] top-[0px] overflow-y-auto  py-7 right-0  bg-[#383636f1] w-full md:w-[600px] z-[9999999999999999999] translate-x-full"
+        className="fixed duration-500 text-primary h-[100vh] top-0 overflow-y-visible  py-7 right-0  bg-[#383636f1] w-full md:w-[600px] z-[9999999999999999999] translate-x-full"
       >
         <h1 className="px-4 py-3 text-primary text-[4.5rem] mb-5 w-fit mx-auto">
           Orders
@@ -167,7 +167,7 @@ const Header = () => {
         ))}
       </ul>
       <span className="flex items-center gap-5">
-        <span className="fixed top-5 z-[9999999999999999999999999999999999999999999] right-7">
+        <span className="fixed top-5 z-[999999999999999999999999] right-7">
           <span className="absolute z-[9999999999999999999999] -top-[35%] -right-[35%] bg-red-500 text-white p-1 rounded-full w-5 h-5 flex justify-center items-center">
             {order.length}
           </span>
@@ -180,7 +180,7 @@ const Header = () => {
             className="text-[1.8rem] cursor-pointer z-[999999999999999999999999999]"
           />
         </span>
-        <div className="md:hidden mr-2" onClick={toggleMenu}>
+        <div className="md:hidden" onClick={toggleMenu}>
           <GiHamburgerMenu className="text-[1.8rem] cursor-pointer" />
         </div>
       </span>

@@ -328,3 +328,25 @@ ul.active {
 .animated-element-forwards {
   animation-fill-mode: forwards; /* Does not retain the final state */
 }
+
+.boncDown {
+  animation: boncdown 0.3s ease-in-out 0.5s forwards;
+}
+
+@keyframes boncdown {
+  0% {
+    transform: translateY(-100%);
+  }
+  50% {
+    transform: translateY(10%);
+  }
+  65% {
+    transform: translateY(-10%);
+  }
+  80% {
+    transform: translateY(5%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
