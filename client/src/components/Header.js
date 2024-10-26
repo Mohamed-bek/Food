@@ -167,7 +167,7 @@ const Header = () => {
         ))}
       </ul>
       <span className="flex items-center gap-5">
-        <span className="fixed top-5 z-[999999999999999999999999] right-7">
+        <span className="fixed top-5 z-[99999999999999999999999999999999999999999999] right-7">
           <span className="absolute z-[9999999999999999999999] -top-[35%] -right-[35%] bg-red-500 text-white p-1 rounded-full w-5 h-5 flex justify-center items-center">
             {order.length}
           </span>
