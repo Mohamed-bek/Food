@@ -23,7 +23,7 @@ cloudinary.config({
 const app = express();
 app.use(
   cors({
-    origin: "http://localhost:3000", // Your frontend URL
+    origin: "https://food-lly.vercel.app/", // Your frontend URL
     credentials: true, // Enable credentials (cookies) to be sent
   })
 );
