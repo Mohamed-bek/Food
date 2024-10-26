@@ -5,8 +5,7 @@ import { AiOutlineArrowLeft, AiOutlineArrowRight } from "react-icons/ai";
 const PlatesBox = ({ MainPLates, MainPlate, setMainPlate }) => {
   const [index, setIndex] = useState(0);
   const [left, setLeft] = useState(index * 25);
-  const [animate, setAnimate] = useState(false);
-
+  const [animate, setAnimate] = useState(true);
   const changeMainPlate = (ind) => {
     if (ind < MainPLates.length - 1) {
       setLeft((ind + 1) * 25);
@@ -17,14 +16,14 @@ const PlatesBox = ({ MainPLates, MainPlate, setMainPlate }) => {
       setMainPlate(MainPLates[0]);
       setIndex(0);
     }
-    setAnimate(true); // Reset animation state
+    setAnimate(true);
     setTimeout(() => setAnimate(false), 300);
   };
 
   useEffect(() => {
-    setAnimate(true); // Reset animation state
+    setAnimate(true);
     setTimeout(() => setAnimate(false), 300);
-  }, []);
+  }, [MainPlate]);
 
   return (
     <div className="w-full md:w-[75%] ml-auto mr-0 flex md:block flex-wrap">

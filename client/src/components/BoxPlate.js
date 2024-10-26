@@ -25,9 +25,11 @@ const BoxPlate = ({ Plate, animate }) => {
     incrementCounter(Plate?.likes || 0, setLikes);
     incrementCounter(Plate?.dislikes || 0, setDislikes);
   }, [Plate]);
-
+  useEffect(() => {}, [animate]);
   return (
-    <div className="p-1 animate__animated animate__bounceIn duration-[2s] animated-element-forwards scale-0 px-2 md:px-6 md:py-3 bg-primary rounded-xl text-secondary">
+    <div
+      className={`p-1 animate__animated animate__bounceIn duration-[2s] animated-element-forwards px-2 md:px-6 md:py-3 bg-primary rounded-xl text-secondary`}
+    >
       <h3 className="font-extrabold text-[1.2rem]"> Overview </h3>
       <h1 className="text-[2.5rem] md:text-[4rem] relative w-fit font-bold flex gap-1 items-center">
         <span className="overflow-hidden">

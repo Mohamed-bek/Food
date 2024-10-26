@@ -1,5 +1,5 @@
-import logo from "./logo.svg";
 import "./App.css";
+import "animate.css";
 import AddPlat from "./pages/AddPlat";
 import About from "./pages/About";
 import BookingList from "./pages/BookingList";
@@ -29,7 +29,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/food/:id" element={<Food />} />
         <Route path="/order/:id" element={<Order />} />
-        <Route path="/orders" element={<Order />} />
+        <Route path="/orders" element={<Orders />} />
       </Routes>
     </div>
   );
