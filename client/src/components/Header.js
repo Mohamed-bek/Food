@@ -79,7 +79,7 @@ const Header = () => {
     <div className="boncDown -translate-y-full bg-primary MainHeder relative flex justify-around items-center w-full h-[70px] border-b-[2px] z-50 border-solid border-secondary">
       <nav
         ref={CardRef}
-        className="fixed duration-500 text-primary h-[100vh] top-0 overflow-y-visible  py-7 right-0  bg-[#383636f1] w-full md:w-[600px] z-[9999999999999999999] translate-x-full"
+        className="fixed duration-500 text-primary h-[100vh] top-0 overflow-y-visible  py-7 right-0  bg-[#383636f1] w-full md:w-[600px] z-[999999999] translate-x-full"
       >
         <h1 className="px-4 py-3 text-primary text-[4.5rem] mb-5 w-fit mx-auto">
           Orders
