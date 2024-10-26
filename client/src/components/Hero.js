@@ -26,7 +26,9 @@ const Hero = () => {
   const [MainPlate, setMainPlate] = useState(MainPlates[0]);
 
   useEffect(() => {
+    console.log("Getting");
     const GetMainsPlats = async () => {
+      console.log(" Start Getting");
       try {
         const res = await axios.get(
           "https://food-beta-indol.vercel.app/main-plats"
