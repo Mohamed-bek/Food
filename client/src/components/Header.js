@@ -43,7 +43,6 @@ const Header = () => {
     if (navRef.current) {
       const liElements = navRef.current.querySelectorAll("li");
       const isActive = navRef.current.classList.contains("active");
-
       if (isActive) {
         liElements.forEach((li) => li.classList.add("exiting"));
         setTimeout(() => {
@@ -162,7 +161,12 @@ const Header = () => {
             key={index}
             className="block cursor-pointer px-[15px] py-[25px] text-center text-[1.2rem] capitalize text-secondary font-medium relative z-[3]"
           >
-            <Link to={item.link}>{item.name}</Link>
+            <Link
+              onClick={() => (window.innerWidth <= 867 ? toggleMenu() : null)}
+              to={item.link}
+            >
+              {item.name}
+            </Link>
           </li>
         ))}
       </ul>
