@@ -79,36 +79,35 @@ const Header = () => {
         ref={CardRef}
         className="fixed duration-500 overflow-y-auto text-primary min-h-[100vh] top-0 py-7 right-0  bg-[#383636f1] w-full md:w-[600px] z-[999999999] translate-x-full"
       >
-        <h1 className="px-4 py-3 text-primary text-[4.5rem] mb-5 w-fit mx-auto">
+        <h1 className="px-4 py-1 text-primary text-[4.5rem] w-fit mx-auto">
           Orders
         </h1>
-        <div className="h-[40%] overflow-y-visible">
-          {order.map((item) => (
-            <div
-              key={item.plat._id}
-              className="mx-auto mb-3 px-1 flex items-center w-full md:w-[90%] gap-3 text-primary"
+
+        {order.map((item) => (
+          <div
+            key={item.plat._id}
+            className="mx-auto mb-3 px-1 flex items-center w-full md:w-[90%] gap-3 text-primary"
+          >
+            <img className="w-1/5" src={item.plat.image?.url} alt="" />
+            <p className="flex-1 text-[1.8rem] font-medium">
+              {item.plat.name + " " + item.plat.subName}
+            </p>
+            <span
+              onClick={() => subQuantity(item.plat._id)}
+              className="block cursor-pointer p-1 md:p-2 rounded-full bg-primary text-secondary text-[1.2rem] md:text-[1.6rem]"
             >
-              <img className="w-1/5" src={item.plat.image?.url} alt="" />
-              <p className="flex-1 text-[1.8rem] font-medium">
-                {item.plat.name + " " + item.plat.subName}
-              </p>
-              <span
-                onClick={() => subQuantity(item.plat._id)}
-                className="block cursor-pointer p-1 md:p-2 rounded-full bg-primary text-secondary text-[1.2rem] md:text-[1.6rem]"
-              >
-                <FaMinus />
-              </span>
-              <p className="text-[1.5rem] mx-2">{item.quantity}</p>
-              <span
-                onClick={() => addQuantity(item.plat)}
-                className="block cursor-pointer p-1 md:p-2 rounded-full bg-primary text-secondary text-[1.2rem] md:text-[1.6rem]"
-              >
-                <FaPlus />
-              </span>
-              <p className="w-1/6">{item.quantity * item.plat.price} DA</p>
-            </div>
-          ))}
-        </div>
+              <FaMinus />
+            </span>
+            <p className="text-[1.5rem] mx-2">{item.quantity}</p>
+            <span
+              onClick={() => addQuantity(item.plat)}
+              className="block cursor-pointer p-1 md:p-2 rounded-full bg-primary text-secondary text-[1.2rem] md:text-[1.6rem]"
+            >
+              <FaPlus />
+            </span>
+            <p className="w-1/6">{item.quantity * item.plat.price} DA</p>
+          </div>
+        ))}
         <p className="text-[1.4rem] text-primary font-medium text-center mt-2">
           The Total Amount is {getTotalAmount()} DA
         </p>
