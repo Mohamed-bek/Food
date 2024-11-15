@@ -65,7 +65,7 @@ const Header = () => {
         {
           withCredentials: true,
           headers: {
-            "Content-Type": "application/json", // Important: Correct content type
+            "Content-Type": "application/json",
           },
         }
       );
