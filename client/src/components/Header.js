@@ -149,9 +149,11 @@ const Header = () => {
           </form>
         )}
       </nav>
-      <div className="text-[2.5rem] capitalize pr-4 text-secondary font-bold">
-        Foodly
-      </div>
+      <Link to={"/"}>
+        <div className="text-[2.5rem] capitalize pr-4 text-secondary font-bold">
+          Foodly
+        </div>
+      </Link>
       <ul
         ref={navRef}
         className="NavBar flex duration-1000 h-full items-center w-fit bg-primary"
