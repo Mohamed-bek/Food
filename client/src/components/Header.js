@@ -183,7 +183,7 @@ const Header = () => {
               e.target.classList.toggle("text-white");
               CardRef.current?.classList.toggle("translate-x-0");
               CardRef.current?.classList.toggle("translate-x-full");
-              document.body.style.overflow = "hidden";
+              document.body.classList.toggle("hidden");
             }}
             className="text-[1.8rem] cursor-pointer z-[999999999999999999999999999]"
           />
