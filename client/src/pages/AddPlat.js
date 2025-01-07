@@ -9,7 +9,7 @@ const Page = () => {
   const { isLoggedIn } = useAuthStore();
 
   useEffect(() => {
-    if (isLoggedIn) {
+    if (!isLoggedIn) {
       navigate("/login");
     }
   }, [isLoggedIn]);
