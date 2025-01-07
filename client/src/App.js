@@ -1,5 +1,4 @@
 import "./App.css";
-// import "animate.css";
 import AddPlat from "./pages/AddPlat";
 import About from "./pages/About";
 import BookingList from "./pages/BookingList";

@@ -114,21 +114,6 @@ body {
   }
 }
 
-@media (min-width: 1280px) {
-  .plates {
-    width: 1000px;
-    height: 1000px;
-    border-width: 90px;
-  }
-  .plates img {
-    width: 340px;
-    height: 340px;
-  }
-}
-
-ul.active {
-  transform: translateY(100%);
-}
 .navbar {
   height: calc(100vh - 70px);
 }
@@ -204,6 +189,23 @@ ul.active {
     letter-spacing: 20px;
   }
 }
+
+@media (min-width: 1280px) {
+  .plates {
+    width: 1000px;
+    height: 1000px;
+    border-width: 90px;
+  }
+  .plates img {
+    width: 340px;
+    height: 340px;
+  }
+}
+
+ul.active {
+  transform: translateY(100%);
+}
+
 .plate {
   opacity: 0; /* Initially hidden */
   transition: opacity 0.5s ease, transform 0.75s ease; /* Transition for opacity and transform */
