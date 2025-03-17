@@ -7,10 +7,58 @@ const Hero = () => {
   const [MainPlates, setMainPlates] = useState([
     {
       _id: "1",
-      name: "bikin",
-      subName: "eggs",
+      name: "Salamon",
+      subName: "Salad",
       image: {
-        url: "/images/plat2.png",
+        url: "https://res.cloudinary.com/dt8qbasyh/image/upload/v1729387216/foodly/plat_1729387211725.png",
+        public_id: "1",
+      },
+      chef: "Mohamed",
+      price: 2000,
+      likes: 100,
+      dislikes: 19,
+      rating: 4.5,
+      description:
+        "is a flavorful dish made from ground meat (typically beef or lamb) mixed with aromatic spices, herbs, onions, and sometimes breadcrumbs. The meat mixture is shaped into patties, balls, or skewers and grilled, baked, or pan-fried until juicy and tender. It pairs perfectly with pita bread, hummus, or a drizzle of yogurt sauce for extra flavor.",
+    },
+    {
+      _id: "2",
+      name: "Chicken",
+      subName: "Salad",
+      image: {
+        url: "https://res.cloudinary.com/dt8qbasyh/image/upload/v1729387400/foodly/plat_1729387389265.png",
+        public_id: "1",
+      },
+      chef: "Mohamed",
+      price: 2000,
+      likes: 100,
+      dislikes: 19,
+      rating: 4.5,
+      description:
+        "is a flavorful dish made from ground meat (typically beef or lamb) mixed with aromatic spices, herbs, onions, and sometimes breadcrumbs. The meat mixture is shaped into patties, balls, or skewers and grilled, baked, or pan-fried until juicy and tender. It pairs perfectly with pita bread, hummus, or a drizzle of yogurt sauce for extra flavor.",
+    },
+    {
+      _id: "3",
+      name: "Grilled",
+      subName: "Meat",
+      image: {
+        url: "https://res.cloudinary.com/dt8qbasyh/image/upload/v1729387468/foodly/plat_1729387464651.png",
+        public_id: "1",
+      },
+      chef: "Mohamed",
+      price: 2000,
+      likes: 100,
+      dislikes: 19,
+      rating: 4.5,
+      description:
+        "is a flavorful dish made from ground meat (typically beef or lamb) mixed with aromatic spices, herbs, onions, and sometimes breadcrumbs. The meat mixture is shaped into patties, balls, or skewers and grilled, baked, or pan-fried until juicy and tender. It pairs perfectly with pita bread, hummus, or a drizzle of yogurt sauce for extra flavor.",
+    },
+    {
+      _id: "4",
+      name: "Kofta",
+      subName: "Salad",
+      image: {
+        url: "https://res.cloudinary.com/dt8qbasyh/image/upload/v1729387587/foodly/plat_1729387559835.png",
         public_id: "1",
       },
       chef: "Mohamed",

@@ -149,7 +149,8 @@ const Header = () => {
           </form>
         )}
       </nav>
-      <Link to={"/"}>
+      <Link className="flex justify-center items-center gap-2" to={"/"}>
+        <img className="h-[50px]" src="/images/icon.png" />
         <div className="text-[2.5rem] capitalize pr-4 text-secondary font-bold">
           Foodly
         </div>
